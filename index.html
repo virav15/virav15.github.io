@@ -1,88 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="style/_bootswatch.css">
-<link rel="stylesheet" href="style/style.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bootstrap Visualization Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="style/style.css"/>
+<link rel="stylesheet" type="text/css" media="screen" href="style/_bootswatch.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     
-    <title>Weather Analysis Visualization</title>
 </head>
 <body>
-    
+    <!--Nav Bar-->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <a class="navbar-brand logo" href="index.html"> 
-                <span class="nav-color">Latitude</span></a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
+    
+            <!-- Collect the nav links, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!--left nav link-->
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.html">LATITUDE
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+                <!--Right nav link-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="temperature.html">Max Temperature</a>
+                            </li>
+                            <li>
+                                <a href="humidity.html">Humidity</a>
+                            </li>
+                            <li>
+                                <a href="cloudiness.html">Cloudiness</a>
+                            </li>
+                            <li>
+                                <a href="wind.html">Wind Speed</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="comparison.html">Comparison</a>
+                    </li>
+                    <li>
+                        <a href="data.html">Data</a>
+                    </li>
 
-            <div class="nav navbar-Spacelab navbar-right">
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Plots<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="temperature.html">Max Temperature</a></li>
-                        <li><a href="humidity.html">Humidity</a></li>
-                        <li><a href="cloudiness.html">Cloudiness</a></li>
-                        <li><a href="wind_speed.html">Wind Speed</a></li>
-                    </ul>
-                </li>
-                <li><a href="comparison.html"> Comparison</a></li>
-                <li><a href="data.html"> Data</a></li>                                           
+                </ul>
             </div>
-        </div>      
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
     </nav>
 
-    <div class = "container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="panel">
-                    <div class="panel-body">
-
-                    <h2>Summary: Latitude vs Longitude</h2>
-                    <hr>
-                    <img class="first image" src="assets\Fig1.png" alt="first image"  >
-                    <br><p class = "text">This visualization analysis shows about 700+ cities weather data. The main objective of this analysis is to showcase the relationship of various factors like temperature, humidity, cloudiness and wind speed with respect to the distance from the equator. <br> 
-                    For this analysis, approx. 2000 coordinate pairs of latitude and longitude were created randomly. A Python library citypy was used to generate city names for respective coordinates. 
-A series of successful API calls from OpenWeatherMap, was performed after selectiing unique observations to check weather data. After  that a series of plots were plotted against latitude using Matplotlib and Seaborn libraries.</p> 
-                   <br>
-<h3> Conclusion</h3>
-<p>An equatorial climate is a type of tropical climate in which there is no dry season. It is usually found at latitudes within five degrees of the equator and tropical rainforest is the natural vegetation.</p>
-                    <br>        
+    <!--Main Grid-->
+    <div class= "container">
+        <div class= "row">
+            <div class= "col-md-7">
+                <div class= "main-box">
+                <h1 class= "main-pg-header">Summary: Latitude vs. X</h1>
+                <hr>
+                <div class= "summary txt">
+                    <img id= "main-img" src= "https://github.com/aksklar/web_viz_dashboard/blob/master/weatherPy%20images/temp.png?raw=true", alt= "Temp vs Latitude">
+                    <p>
+                        The purpose of this project was to analyze how weather changes as you get closer to the equator.  
+                        To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.  
+                        After assembling the dataset, we used Matplotlib, to plot various aspects of the weather vs. latitude.  
+                        Factors we looked at included: temperature, cloudiness, wind speed, and humidity.  This site provides the sourced
+                        data and visualizations created as part of the analysis, as well as explanation and descriptions of any trends and correlations witnessed.
+                    </p>
+                </div>
+                </div>
+            </div>
+            <div class= "col-md-5">
+                <div class= "side-box">
+                <h2 class= "main-pg-subheader">Visualizations</h2>
+                <hr>
+                <div class= "sidebar">
+                    <a href= "temperature.html"><img id= "side-img1" src= "assets/Fig1", alt= "Temp vs. Latitude Scatterplt"></a>
+                    <a href= "humidity.html"><img id= "side-img2" src= "assets/Fig2", alt= "Humidity vs. Latitude Scatterplt"></a>
+                    <a href= "cloudiness.html"><img id= "side-img3" src= "assets/Fig3", alt= "Cloudiness vs. Latitude Scatterplt"></a>
+                    <a href= "wind.html"><img id= "side-img4" src= "assets/Fig4", alt= "Wind Speed vs. Latitude Scatterplt"></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                        <div class="panel-body">                                    
-                            <h2>Visualizations</h2>
-                            <hr>
-
-                            <div class="row" >
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="temperature.html"><img class = "img img-responsive" src="assets\Fig1.png" style="width:100%" alt=""></a></div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="humidity.html"><img class = "img img-responsive" src="assets\Fig2.png" style="width:100%" alt=""></a></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="cloudiness.html"><img class = "img img-responsive" src="assets\Fig3.png" style="width:100%" alt=""></a></div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="wind_speed.html"><img class = "img img-responsive" src="assets\Fig4.png" style="width:100%" alt=""></a></div>
-                            </div>
-                                
-                        </div>
-                </div>     
-            </div>    
+        </div>
     </div>
+
+    <!--Footer-->
+    <div class= "container-fluid bottom-footer page-footer">
+        <div class= "row">
+            <div class= "col text-center"
+            <p id= "footer-txt">
+                &copy; Copyright Viral Vakani - UNC Coding Bootcamp 2018
+            </p>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
