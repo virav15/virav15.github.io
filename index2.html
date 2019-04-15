@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Visualization Dashboard</title>
+  <link rel="stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href = "style.css">
+</head>
+
+<body>
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Lattitude</a>
+                  </div>
+              
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+
+                    <ul class="nav navbar-nav navbar-right">
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="maxtemp.html">Max Temperature</a></li>
+                          <li><a href="humidity.html">Humidity</a></li>
+                          <li><a href="cloudiness.html">Cloudiness</a></li>
+                          <li><a href="windspeed.html">Wind Speed</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="comparison.html">Comparison</a></li>
+                      <li><a href="data.html">Data</a></li>
+                    </ul>
+                  </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+              </nav>
+        <div class="container">
+        <div class = "row">
+                <div class="col-lg-7 col-sm-12">
+                <h1>Summary: Latitude vs. X</h1>
+                <hr>
+                <br>
+                <div class ="pull-left">
+                        <img src="Fig1.png" alt="Latiitude vs. Max Temperature" width = "200" height="175">
+                    </div>
+                <p>The purpose of this project was to analyze how weather changes as you get closer
+                        to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap
+                        API to assemble a dataset on over 500 cities. </p>
+                    <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather
+                        vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. 
+                        This site provides the source data and visualizations created as part of the analysis, 
+                        as well as explanations and descriptions of any trends and correlations witnessed. 
+                    </p>
+                    <p>Trend 1 - Temperature vs Latitude Plot shows that the temperatures are higher the closer they are to the equator (latitude range of -20 to 20) <br>
+                    Trend 2 - City Latitude vs Windspeed Plot shows that Windspeeds are somewhat indifferent to Latitudes, but it is important to note that highest wind speed outliers all occur at latitudes furthest from the equator.<br></brf>
+                    Trend 3 - Based on the data, it seems as though cloudiness and humidity are relatively consistent across all latitudes. Further analysis to include an additional variable may reveal further insights into those relationships
+                    </p>
+                  </div>
+
+                <div class="col-lg-3 col-lg-offset-1 col-sm-12">
+                <h2>Visualizations</h2>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-3">
+                        <a href ="maxtemp.html">
+                        <img src="Fig1.png" alt="Latiitude vs. Max Temperature" width = "140" height="120">
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-6 col-sm-3">
+                    <a href = "humidity.html">
+                        <img src="Fig2.png" alt="Latitude vs. Humidity" width = "140" height="120">
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-6 col-sm-3">
+                    <a href = "cloudiness.html">
+                         <img src="Fig3.png" alt="Latitude vs. Cloudiness" width = "140" height="120">
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-6 col-sm-3">
+                    <a href="windspeed.html">
+                        <img src="Fig4.png" alt="Latitude vs. Wind Speed" width = "140" height="120">
+                        </a>
+                    </div>
+                    
+            </div>
+            </div>
+        </div>
+
+        </div>
+        <br>
+        <footer class="footer navbar-fixed-bottom">
+          <div class="two-toned-footer-color"></div>
+          <p class="text-muted text-muted-footer text-center">
+            &copy; Charles Pratt 2018
+          </p>
+        </footer>    
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>
