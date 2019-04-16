@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Web Visualization Dashboard</title>
+
+    <link rel="stylesheet" href="style/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style/bootstrap.css"/>
+    <link rel="stylesheet" href="style/_variables.css"/>
+    <link rel="stylesheet" href="style/hover.css" media="all"/>
+    <link rel="stylesheet" href="style/hover-min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" media="screen" href="style/_bootswatch.css"/>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Animated Dropdown</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Click Me!
+        </a>
+          <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+          <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container text-center">
+  <h1 class="mt-5 text-white font-weight-light">Animated Bootstrap Navbar Dropdowns</h1>
+  <p class="lead text-white-50">An attractive yet subtle dropdown animation for dropdown menus loacated within a Bootstrap navbar</p>
+</div>
+            </div>
+<!--Main Grid-->
+<div class= "container">
+        <div class= "row">
+            <div class= "col-md-7">
+                <div class= "main-box">
+                <h1 class= "card-header">Summary: Latitude vs. X</h1>
+                <hr>
+                <div class="card text-white bg-secondary mb-3" style="max-width: 65rem;">
+                    <img id= "main-img" src= "assets/Fig1.png", alt= "Temp vs Latitude">
+
+                    <div class="card-body">
+
+
+                        The purpose of this project is to analyze how weather changes as you get closer to the equator.The main objective of this analysis is to showcase
+			            the relationship of various factors like temperature, humidity, cloudiness and wind speed with respect to the distance from the equator.
+                        To accomplish this analysis, the data was pulled from the OpenWeatherMap API to assemble a dataset on over 500 cities.
+                        After assembling the dataset, I used Matplotlib to plot various factors that includes: temperature, cloudiness, wind speed, and humidity.
+			            For this analysis, approx. 2000 coordinate pairs of latitude and longitude were created randomly. A Python library citypy was used to generate city names for respective coordinates.
+			             A series of successful API calls from OpenWeatherMap, was performed after selectiing unique observations to check weather data. After that a series of plots were plotted against latitude
+			            using Matplotlib and Seaborn libraries. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
+
+                    </div>
+
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-lg-offset-1 col-sm-12">
+                <div >
+                <h2 class="card-header">Visualizations</h2>
+                <hr>
+                <div class= "card mb-3" style="max-width: 20rem;">
+                    <div class="col-lg-6 col-sm-4">
+                        <br> <div> Max Temprature </div>
+                        <a href ="maxtemp.html" class="grow">
+                        <img src="assets/Fig1.png" alt="Latiitude vs. Max Temperature" width = "150" height="130">
+                        </a>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-4">
+                           <br> <p> Humidity</p>
+                    <a href = "humidity.html" class="pulse">
+                        <img src="assets/Fig2.png" alt="Latitude vs. Humidity" width = "150" height="130">
+                        </a>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-4">
+                           <br> <p> Cloudiness </p>
+                    <a href = "cloudiness.html">
+                         <img src="assets/Fig3.png" alt="Latitude vs. Cloudiness" width = "150" height="130">
+                        </a>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-4">
+                        <br><p>Wind Speed </p>
+                    <a href="windspeed.html">
+                        <img src="assets/Fig4.png" alt="Latitude vs. Wind Speed" width = "150" height="130">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class= "container-fluid bottom-footer page-footer">
+     <div class= "row">
+        <div class= "col text-center"
+            <div id="footer-txt">
+                &copy; Copyright Viral Vakani - UNC Data Analytics Bootcamp 2018
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
