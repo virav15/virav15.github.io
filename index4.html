@@ -72,23 +72,19 @@ crossorigin="anonymous"></script>
                 <div class= "main-box">
                 <h1 class= "card-header">Summary: Latitude vs. X</h1>
                 <hr>
-                <div class="card bg-light mb-3" style="max-width: 85rem;">
-                    <img id= "main-img" src= "assets/Fig1.png", alt= "Temp vs Latitude">
-                    <br><br>
-                    <div class="card-body">
-
-
-                        <p class="card-title">The purpose of this project is to analyze how weather changes as you get closer to the equator.The main objective of this analysis is to showcase
-			            the relationship of various factors like temperature, humidity, cloudiness and wind speed with respect to the distance from the equator.
-                        To accomplish this analysis, the data was pulled from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
-                        <p>After assembling the dataset, I used Matplotlib to plot various factors that includes: temperature, cloudiness, wind speed, and humidity.
-			            For this analysis, approx. 2000 coordinate pairs of latitude and longitude were created randomly. A Python library citypy was used to generate city names for respective coordinates.
-			             A series of successful API calls from OpenWeatherMap, was performed after selectiing unique observations to check weather data. After that a series of plots were plotted against latitude
-			            using Matplotlib and Seaborn libraries. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
-
+                <div class="main-box">
+                        <h1 class="main-pg-header">Max Temperature</h1>
+                        <hr>
+                        <div class="summary txt">
+                            <img id="result-img" src="assets/Fig2.png" alt="Temp vs Latitude">
+                            <p>
+                                The temperature increases for cities situated near the equator (0 degree latitude).  
+                                The highest temperatures are presented in cities between the Tropic of Cancer and Tropic of Capricorn.  
+                                Furthermore, there is a sharp decrease in temperature for cities North of the equator.
+                                
+                            </p>
+                        </div>
                     </div>
-
-                </div>
                 </div>
             </div>
             <div class="col-lg-3 col-lg-offset-1 col-sm-12">
