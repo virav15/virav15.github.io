@@ -18,7 +18,7 @@ crossorigin="anonymous"></script>
 <body>
     <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <h1><a class="navbar-brand" href="#">Latitude</a></h1>
+                    <a class="navbar-brand" href="#">Latitude</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -64,15 +64,18 @@ crossorigin="anonymous"></script>
                 <hr>
                 <div class= "summary txt">
                     <img id= "main-img" src= "assets/Fig1.png", alt= "Temp vs Latitude">
-<div class="alert alert-dismissible alert-success>
-                    <p class="text-success">
+
+                    <div class="alert alert-dismissible alert-success">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+                        <p class="text-success">
                         The purpose of this project is to analyze how weather changes as you get closer to the equator.The main objective of this analysis is to showcase
-			 the relationship of various factors like temperature, humidity, cloudiness and wind speed with respect to the distance from the equator.
+			            the relationship of various factors like temperature, humidity, cloudiness and wind speed with respect to the distance from the equator.
                         TTo accomplish this analysis, the data was pulled from the OpenWeatherMap API to assemble a dataset on over 500 cities.
                         After assembling the dataset, I used Matplotlib to plot various factors that includes: temperature, cloudiness, wind speed, and humidity.
-			For this analysis, approx. 2000 coordinate pairs of latitude and longitude were created randomly. A Python library citypy was used to generate city names for respective coordinates.
-			 A series of successful API calls from OpenWeatherMap, was performed after selectiing unique observations to check weather data. After that a series of plots were plotted against latitude
-			using Matplotlib and Seaborn libraries. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
+			            For this analysis, approx. 2000 coordinate pairs of latitude and longitude were created randomly. A Python library citypy was used to generate city names for respective coordinates.
+			             A series of successful API calls from OpenWeatherMap, was performed after selectiing unique observations to check weather data. After that a series of plots were plotted against latitude
+			            using Matplotlib and Seaborn libraries. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
                     </p>
                     </div>
 			<ul class="text-success"><li>Temperature vs Latitude Plot shows that the temperatures are higher the closer they are to the equator (latitude range of -20 to 20) </li>
