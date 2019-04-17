@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Web Visualization Dashboard</title>
+
+    <link rel="stylesheet" href="style/bootstrap.min.css"/>
+    <!-- <link rel="stylesheet" href="style/bootstrap.css"/> -->
+    <!--<link rel="stylesheet" href="style/_variables.css"/> -->
+    <link rel="stylesheet" href="style/bootstrap.bundle.min" media="all"/>
+    <link rel="stylesheet" href="style/animnav.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css"/>
+<!-- <link rel="stylesheet" type="text/css" media="screen" href="style/_bootswatch.css"/> -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand navbar-left" href="index.html">Latitude</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto navbar-right">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Plots
+        </a>
+
+          <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+          <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="temprature.html">Max Temprature</a>
+            <div class="dropdown-divider"></div>
+
+            <a class="dropdown-item" href="humidity.html">Humidity</a>
+            <div class="dropdown-divider"></div>
+
+            <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+            <div class="dropdown-divider"></div>
+
+            <a class="dropdown-item" href="wind.html">Wind Speed</a>
+            <div class="dropdown-divider"></div>
+
+          </div>
+        </li>
+        <li>
+                <a href="comparision.html" class="nav-link">Comparison</a>
+            </li>
+            <li>
+                <a href="data.html" class="nav-link">Data</a>
+            </li>
+      </ul>
+
+
+    </div>
+  </div>
+</nav>
+
+
+<div class= "container">
+    <div class= "row">
+        <div class= "col-md-9 ">
+            <div class= "main-box">
+            <h1 class= "card-header">Data</h1>
+              <br><br>
+            <div class="alert alert-dismissible alert-info" style="max-width: 90rem;">
+                The following table includes all the data used for plotting during this project.</div>
+              <hr>
+              <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-5">
+                      <h3 class = "text-center">vs Max Temperture</h3>
+                      <a href="temperature.html"><img class = "img img-responsive" src="assets\Fig1.png" style="width:80%" alt=""></a></div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h3 class = "text-center">vs Humidity</h3>
+                      <a href="humidity.html"><img class = "img img-responsive" src="assets\Fig2.png" style="width:80%" alt=""></a></div>
+              </div>
+
+              <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h3 class = "text-center">vs Cloudiness</h3>
+                      <a href="cloudiness.html"><img class = "img img-responsive" src="assets\Fig3.png" style="width:80%" alt=""></a></div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                      <h3 class = "text-center">vs Wind Speed</h3>
+                      <a href="wind_speed.html"><img class = "img img-responsive" src="assets\Fig4.png" style="width:80%" alt=""></a></div>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3  col-sm-6">
+            <div >
+            <h2 class="card-header">Visualizations</h2>
+            <hr>
+            <div class= "card mb-3" style="max-width: 20rem;">
+                    <div class="card-header"> Max Temprature </div>
+                <div class="col-lg-6 col-sm-3">
+                    <br>
+                    <a href ="temprature.html" class="grow">
+                    <img src="assets/Fig1.png" alt="Latiitude vs. Max Temperature" width = "150" height="130">
+                    </a>
+                </div>
+                <div class="card-header"> Humidity</div>
+                <div class="col-lg-6 col-sm-3">
+                       <br>
+                <a href = "humidity.html" class="pulse">
+                    <img src="assets/Fig2.png" alt="Latitude vs. Humidity" width = "150" height="130">
+                    </a>
+                </div>
+                <div class="card-header"> Cloudiness</div>
+                <div class="col-lg-6 col-sm-3">
+                       <br>
+                <a href = "cloudiness.html">
+                     <img src="assets/Fig3.png" alt="Latitude vs. Cloudiness" width = "150" height="130">
+                    </a>
+                </div>
+                <div class="card-header">Wind Speed</div>
+                <div class="col-lg-6 col-sm-3">
+                    <br>
+                <a href="wind.html">
+                    <img src="assets/Fig4.png" alt="Latitude vs. Wind Speed" width = "150" height="130">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
